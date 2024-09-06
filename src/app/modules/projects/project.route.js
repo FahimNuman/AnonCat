@@ -9,5 +9,6 @@ router.post("/", productFile, projectController.createProject);
 router.get("/", projectController.getProject);
 router.get("/:id", projectController.getProjectDetails);
 router.route("/:id").patch(projectController.updateProject);
+router.route("/:id").delete(returnController.deleteProject);
 
 export const projectRoutes = router;
